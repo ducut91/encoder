@@ -39,12 +39,5 @@ def main():
         clipboard.copy(str)
 
 
-def hextranslate(s):
-        res = ""
-        for i in range(len(s)/2):
-                realIdx = i*2
-                res = res + chr(int(s[realIdx:realIdx+2],16))
-        return res
-
 if __name__ == '__main__':
 	main()
