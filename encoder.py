@@ -13,22 +13,27 @@ def main():
         str = sys.argv[3]
         if sys.argv[1] == 'encode':
             if(sys.argv[2]) == 'base64':
-                print str.encode('base64','strict')
+                str = str.encode('base64','strict')
+                print str
             elif(sys.argv[2]) == 'hex':
-                print str.encode('hex','strict')
+                str =  str.encode('hex','strict')
+                print str
             elif(sys.argv[2]) == 'url':
-                print urllib.quote(str)
+                str = urllib.quote(str)
+                print str
             else:
                 help.help()
         elif sys.argv[1] == 'decode':
             if(sys.argv[2]) == 'base64':
                 str += '==='
-                print str.decode('base64','strict')
+                str = str.decode('base64','strict')
+                print str
             elif(sys.argv[2]) == 'hex':
                 str = hextranslate(str)
                 print str
             elif(sys.argv[2]) == 'url':
-                print urllib.unquote(str)
+                str =  urllib.unquote(str)
+                print str
             else:
                 help.help()
         clipboard.copy(str)
