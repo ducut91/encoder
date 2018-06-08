@@ -1,2 +1,2 @@
 def help():
-    print 'help'
+    print 'wrong syntax'
