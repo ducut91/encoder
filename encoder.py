@@ -29,7 +29,7 @@ def main():
                 str = str.decode('base64','strict')
                 print str
             elif(sys.argv[2]) == 'hex':
-                str = hextranslate(str)
+                str = str.decode('hex', 'strict')
                 print str
             elif(sys.argv[2]) == 'url':
                 str =  urllib.unquote(str)
