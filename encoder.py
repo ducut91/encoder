@@ -5,7 +5,7 @@ from modules import help
 import urllib
 
 def main():
-    if len(sys.argv) < 4 or len(sys.argv) > 5:
+    if len(sys.argv) != 4:
         help.help()
 
 
